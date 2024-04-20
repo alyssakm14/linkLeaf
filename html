@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leafy Link</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+
+    <style>
+        body, h1, h2, h3, p, ul, li, button {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* Whimsical font for the whole body */
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        nav ul {
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        header img {
+        height: 80px; /* default size for desktop */
+    }
+
+    @media (max-width: 768px) {
+        header img {
+            height: 60px; /* smaller size for mobile devices */
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Leafy Link Logo" style="height: 80px;"> <!-- Logo at the top of the header -->
+        <h1>Leafy Link</h1>
+        <nav>
+            <ul>
+                <li><button class="button"><a href="#home">Home</a></button></li>
+                <li><button class="button"><a href="#plant-list">Plant List</a></button></li>
+                <li><button class="button"><a href="#marketplace">Marketplace</a></button></li>
+                <li><button class="button"><a href="#reminder">Set Reminder</a></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Leafy Link</h2>
+        <p>Here you can find various plant species to purchase from a marketplace!</p>
+        <p>How it works:</p>
+        <p>1. Click on the "Plant List" button to see a list of available plants.</p>
+        <p>2. Click the search bar to search for the specific plant you want.</p>
+        <p>3. Click "Add to Marketplace".</p> <!-- Corrected missing closing tag -->
+        <p>4. A prompt to enter your name and phone number should appear. Once you've entered, your plant will be added to the "Marketplace" section with your name and phone number attached.</p>
+    </section>
+
+    <section id="plant-list">
+        <div id="search-bar">
+            <input type="search" id="searchKey" placeholder="Search by name">
+            <button onclick="search()">Search</button>
+        </div>
+        <div id="plant-list-container">
+            <h2>Plant List</h2>
+            <!-- Plant list will be generated here by JavaScript -->
+        </div>
+    </section>
+    
+    <section id="marketplace">
+        <div id="plant-list-container"></div>
+        <h2>Marketplace</h2>
+        <!-- Marketplace content will be added here by JavaScript -->
+    </section>
+
+    <section id="reminder">
+        <h2>Set Reminder</h2>
+        <!-- Set reminder content goes here -->
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Leafy Link. All rights reserved.</p>
+    </footer>
+</body>
+</html>
